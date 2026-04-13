@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    
+
     max-width: 400px;
     margin: auto;
     background: white;
@@ -19,4 +19,8 @@ body {
 
 img {
     width: 150px;
+}
+button{
+    background-color: blue;
+    color: white;
 }
