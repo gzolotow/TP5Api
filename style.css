@@ -1,8 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ff2d2d;
     text-align: center;
     padding: 40px;
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
