@@ -1,0 +1,199 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "TP5 API - Mini Pokedex",
+    "description": "API que envuelve la PokeAPI (externa) para consultar pokemones, tipos, habilidades y generaciones. TP: Documentación de una API con Swagger.",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Pokemon",
+      "description": "Endpoints relacionados a pokemones"
+    },
+    {
+      "name": "Types",
+      "description": "Endpoints relacionados a tipos"
+    },
+    {
+      "name": "Abilities",
+      "description": "Endpoints relacionados a habilidades"
+    },
+    {
+      "name": "Generations",
+      "description": "Endpoints relacionados a generaciones"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/pokemon/{nombre}": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "description": "Obtiene la información de un pokemon buscando por su nombre.",
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/pokemon/id/{id}": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "description": "Obtiene la información de un pokemon buscando por su id numérico.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/pokemones": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "description": "Devuelve un listado de pokemones, con soporte para paginación mediante limit y offset.",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/type/{tipo}": {
+      "get": {
+        "tags": [
+          "Types"
+        ],
+        "description": "Obtiene información sobre un tipo de pokemon (por ejemplo fire, water) y los pokemones que pertenecen a ese tipo.",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/ability/{nombre}": {
+      "get": {
+        "tags": [
+          "Abilities"
+        ],
+        "description": "Obtiene información sobre una habilidad de pokemon buscando por su nombre.",
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/generation/{id}": {
+      "get": {
+        "tags": [
+          "Generations"
+        ],
+        "description": "Obtiene información sobre una generación de pokemon buscando por su id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tp5api",
+  "version": "1.0.0",
+  "description": "URL: https://pokeapi.co/api/v2/pokemon/pikachu\r Método: GET\r Status: 200 OK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "swagger": "node swagger.js",
+  "start": "node server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzolotow/TP5Api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gzolotow/TP5Api/issues"
+  },
+  "homepage": "https://github.com/gzolotow/TP5Api#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "node-fetch": "^2.7.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
